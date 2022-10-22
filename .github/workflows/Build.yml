@@ -14,7 +14,7 @@ jobs:
     - name: Copy files and init repo
       run: |
         cp -r LPK micropython/ports
-        git submodle update --init
+        git submodule update --init
     - name: mpy-cross
       run: |
         cd micropython
