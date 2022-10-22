@@ -11,13 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: mpy-cross
+    - name: Copy files and init repo
       run: |
+        cp -r LPK micropython/ports
         git submodule update --init
         cd micropython
+        git submodule update --init
+    - name: mpy-cross
+      run: |
+        cd micropython
         make -C mpy-cross
-    - name: Copy files
-      run: cp -r LPK micropython/ports
     - name: Build
       run: |
         sudo apt install gcc-arm-none-eabi
