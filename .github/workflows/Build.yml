@@ -1,5 +1,6 @@
 name: Build fimware
 
+workflow_dispatch:
 on: 
   push:
     branches: main
