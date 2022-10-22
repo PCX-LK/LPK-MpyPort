@@ -1,0 +1,17 @@
+{
+    "deploy": [
+        "../deploy.md"
+    ],
+    "docs": "",
+    "features": [
+        "Breadboard friendly",
+        "Castellated Pads",
+        "Micro USB"
+    ],
+    "id": "LPK",
+    "mcu": "rp2040",
+    "product": "LPK",
+    "thumbnail": "",
+    "url": "https://github.com/PCX-LK",
+    "vendor": "PCX-LK"
+}
