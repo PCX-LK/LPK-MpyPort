@@ -13,7 +13,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: mpy-cross
       run: |
-        sudo apt install build-essential
         git submodule update --init
         cd micropython
         make -C mpy-cross
@@ -21,6 +20,7 @@ jobs:
       run: cp -r LPK micropython/ports
     - name: Build
       run: |
+        sudo apt install gcc-arm-none-eabi
         cd micropython/ports/LPK
         make BOARD=LPK submodules -j4
         make BOARD=LPK clean -j4
