@@ -12,7 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: mpy-cross
-      run: make -C mpy-cross
+      run: |
+        cd micropython
+        make -C mpy-cross
     - name: Copy files
       run: cp -r LPK micropython/ports
     - name: Build
