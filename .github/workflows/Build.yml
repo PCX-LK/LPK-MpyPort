@@ -1,7 +1,8 @@
 name: Build fimware
 
-workflow_dispatch:
+
 on: 
+  workflow_dispatch:
   push:
     branches: main
 
@@ -16,10 +17,10 @@ jobs:
       run: cp -r LPK micropython/ports
     - name: Build
       run: |
-      cd micropython/ports/LPK
-      make BOARD=LPK submodules -j4
-      make BOARD=LPK clean -j4
-      make -j4
+        cd micropython/ports/LPK
+        make BOARD=LPK submodules -j4
+        make BOARD=LPK clean -j4
+        make -j4
     - name: Upload files to a GitHub release
       uses: svenstaro/upload-release-action@2.3.0
       with:
