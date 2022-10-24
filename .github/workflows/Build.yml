@@ -34,4 +34,4 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: micropython/ports/LPK/build/firmware.uf2
         asset_name: 'fimware-${{ matrix.arch }}-${{ github.head_ref }}.uf2'
-        tag: ${{ github.ref }}-${{ github.head_ref }}
+        tag: ${{ github.ref }}
