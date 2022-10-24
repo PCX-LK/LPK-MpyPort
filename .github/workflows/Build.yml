@@ -28,6 +28,10 @@ jobs:
         make BOARD=LPK submodules -j4
         make BOARD=LPK clean -j4
         make -j4
+    - name: Tree
+      run: |
+        sudo apt install tree -y
+        tree micropython/ports/LPK
     - name: Upload files to a GitHub release
       uses: svenstaro/upload-release-action@2.3.0
       with:
