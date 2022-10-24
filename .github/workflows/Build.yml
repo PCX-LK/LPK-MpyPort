@@ -36,6 +36,7 @@ jobs:
       uses: svenstaro/upload-release-action@2.3.0
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: micropython/ports/LPK/build/firmware.uf2
-        asset_name: 'fimware-${{ matrix.arch }}-${{ github.head_ref }}.uf2'
+        file: micropython/ports/LPK/build-PICO/firmware.uf2
+        asset_name: 'fimware-${{ matrix.arch }}-${{ github.ref }}-${{ github.head_ref }}.uf2'
         tag: ${{ github.ref }}
+        body: ${{ github.ref }}-${{ github.head-ref }}
