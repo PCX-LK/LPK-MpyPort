@@ -14,6 +14,8 @@ jobs:
     - name: Copy files and init repo
       run: |
         git submodule update --init
+        cd micropython
+        git submodule update --init
         cp -r LPK micropython/ports
     - name: mpy-cross
       run: |
@@ -21,7 +23,7 @@ jobs:
         make -C mpy-cross
     - name: Build
       run: |
-        sudo apt install gcc-arm-none-eabi
+        sudo apt install -y gcc-arm-none-eabi
         cd micropython/ports/LPK
         make BOARD=LPK submodules -j4
         make BOARD=LPK clean -j4
