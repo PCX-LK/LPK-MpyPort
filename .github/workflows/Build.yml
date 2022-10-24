@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Copy files
+    - name: Copy files and init repo
       run: |
         cp -r LPK micropython/ports
+        git submodule update --init
     - name: mpy-cross
       run: |
         cd micropython
