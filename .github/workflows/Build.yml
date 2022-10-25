@@ -17,6 +17,7 @@ jobs:
         cp -r LPK micropython/ports
         cd micropython
         git submodule update --init
+        cp ../lpk.h lib/pico-sdk/src/boards/include/boards
     - name: mpy-cross
       run: |
         cd micropython
