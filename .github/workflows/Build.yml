@@ -13,9 +13,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: Copy files and init repo
       run: |
-        git clone --recursive https://github.com/micropython/micropython
+        git clone  https://github.com/micropython/micropython
         cp -r LPK micropython/ports
-        cp lpk.h micropython/lib/pico-sdk/src/boards/include/boards
+        cd micropython
+        git submodule update --init
+        cp ../lpk.h lib/pico-sdk/src/boards/include/boards
     - name: mpy-cross
       run: |
         cd micropython
