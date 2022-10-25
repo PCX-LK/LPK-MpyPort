@@ -29,15 +29,11 @@ jobs:
         make BOARD=LPK submodules -j4
         make BOARD=LPK clean -j4
         make -j4
-    - name: Tree
-      run: |
-        sudo apt install tree -y
-        tree micropython/ports/LPK
     - name: Upload files to a GitHub release
       uses: svenstaro/upload-release-action@2.3.0
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: micropython/ports/LPK/build-PICO/firmware.uf2
-        asset_name: 'fimware-${{ github.RUNNER_ARCH }}-${{ github.HEAD_REF }}.uf2'
+        asset_name: 'fimware-$env:RUNNER_ARCH-$env:HEAD_REF.uf2'
         tag: ${{ github.ref }}
-        body: ${{ github.ref }}-${{ github.head_ref }}
+        body: ${{ github.ref }}-$env:GITHUB_RUN_ID
