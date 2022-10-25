@@ -34,6 +34,6 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: micropython/ports/LPK/build-PICO/firmware.uf2
-        asset_name: 'fimware-$env:RUNNER_ARCH-$env:HEAD_REF.uf2'
+        asset_name: 'fimware-${{ runner.arch }}-${{ github.run_id }}.uf2'
         tag: ${{ github.ref }}
-        body: ${{ github.ref }}-$env:GITHUB_RUN_ID
+        body: ${{ github.ref }}-${{ github.run_id }}
