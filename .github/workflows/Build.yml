@@ -35,5 +35,5 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: micropython/ports/LPK/build-LPK/firmware.uf2
-        asset_name: 'LPK_MPY-fimware-${{ runner.os }}_${{ runner.arch }}-${{ github.head-ref }}-${{ github.run_id }}.uf2'
-        body: '${{ github.head-ref }}-${{ github.run_id }}'
+        asset_name: 'LPK_MPY-fimware-${{ runner.os }}_${{ runner.arch }}-${{ github.head_ref }}-${{ github.run_id }}.uf2'
+        body: '${{ github.head_ref }}-${{ github.run_id }}'
