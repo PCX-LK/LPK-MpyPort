@@ -36,4 +36,4 @@ jobs:
         file: micropython/ports/LPK/build-PICO/firmware.uf2
         asset_name: 'fimware-${{ runner.arch }}-${{ github.run_id }}.uf2'
         tag: ${{ github.ref }}
-        body: ${{ github.ref }}-${{ github.run_id }}
+        body: '${{ github.ref }}-${{ github.run_id }}'
