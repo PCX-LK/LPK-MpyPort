@@ -14,7 +14,7 @@ jobs:
     - name: Copy files and init repo
       run: |
         git clone  https://github.com/micropython/micropython
-        cp -r LPK micropython/ports
+        cp -r LPK/* micropython/ports/rp2
         cd micropython
         git submodule update --init
         cp ../lpk.h lib/pico-sdk/src/boards/include/boards
@@ -26,7 +26,7 @@ jobs:
       run: sudo apt install -y gcc-arm-none-eabi
     - name: Build
       run: |
-        cd micropython/ports/LPK
+        cd micropython/ports/rp2
         make BOARD=LPK submodules -j4
         make BOARD=LPK clean -j4
         make BOARD=LPK -j4
@@ -37,3 +37,4 @@ jobs:
         file: micropython/ports/LPK/build-LPK/firmware.uf2
         asset_name: 'LPK_MPY-fimware-${{ runner.os }}_${{ runner.arch }}-${{ github.ref_name }}-${{ github.run_id }}.uf2'
         body: '${{ github.ref_name }}-${{ github.run_id }}'
+        tag: build

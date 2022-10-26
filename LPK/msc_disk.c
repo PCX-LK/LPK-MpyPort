@@ -44,7 +44,7 @@ static bool ejected = false;
 // Invoked when received SCSI_CMD_INQUIRY
 // Application fill vendor id, product id and revision with string up to 8, 16, 4 characters respectively
 void tud_msc_inquiry_cb(uint8_t lun, uint8_t vendor_id[8], uint8_t product_id[16], uint8_t product_rev[4]) {
-    const char vid[] = "LPK";
+    const char vid[] = "LPK-MPY";
     const char pid[] = "Mass Storage";
     const char rev[] = "1.0";
 
