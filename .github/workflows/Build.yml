@@ -34,7 +34,7 @@ jobs:
       uses: svenstaro/upload-release-action@2.3.0
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: micropython/ports/LPK/build-LPK/firmware.uf2
+        file: micropython/ports/rp2/build-LPK/firmware.uf2
         asset_name: 'LPK_MPY-fimware-${{ runner.os }}_${{ runner.arch }}-${{ github.ref_name }}-${{ github.run_id }}.uf2'
         body: '${{ github.ref_name }}-${{ github.run_id }}'
         tag: build
