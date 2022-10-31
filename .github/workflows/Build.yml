@@ -14,7 +14,7 @@ jobs:
     - name: Copy files and init repo
       run: |
         git clone  https://github.com/micropython/micropython
-        cp -r LPK/* micropython/ports/rp2
+        cp -r LPK micropython/ports/rp2/boards
         cd micropython
         git submodule update --init
         cp ../lpk.h lib/pico-sdk/src/boards/include/boards
