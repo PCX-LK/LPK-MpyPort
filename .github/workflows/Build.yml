@@ -37,4 +37,4 @@ jobs:
         file: micropython/ports/rp2/build-LPK/firmware.uf2
         asset_name: 'LPK_MPY-fimware-${{ runner.os }}_${{ runner.arch }}-${{ github.ref_name }}-${{ github.run_id }}.uf2'
         body: '${{ github.ref_name }}-${{ github.run_id }}'
-        tag: build
+        tag: build-${{ github.run_id }}
