@@ -30,7 +30,7 @@
 
 // --- LED ---
 #ifndef PICO_DEFAULT_LED_PIN
-#define PICO_DEFAULT_LED_PIN 25
+#define PICO_DEFAULT_LED_PIN 2
 #endif
 // no PICO_DEFAULT_WS2812_PIN
 
