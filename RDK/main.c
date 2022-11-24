@@ -300,7 +300,7 @@ const char rp2_help_text[] =
     "For further help on a specific object, type help(obj)\n"
     "For a list of available modules, type help('modules')\n"
     "\n"
-    "MicroPython for LPK\n"
+    "MicroPython for RDK\n"
     "Ported by PCX-LK\n"
-    "https://github.com/PCX-LK/LPK"
+    "https://github.com/PCX-LK/RDK"
 ;

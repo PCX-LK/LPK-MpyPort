@@ -97,11 +97,11 @@ static const uint8_t usbd_desc_cfg[USBD_DESC_LEN] = {
 
 static const char *const usbd_desc_str[] = {
     [USBD_STR_MANUF] = "MicroPython",
-    [USBD_STR_PRODUCT] = "LPK in FS mode",//[USBD_STR_PRODUCT] = "Board in FS mode",
+    [USBD_STR_PRODUCT] = "RDK in FS mode",//[USBD_STR_PRODUCT] = "Board in FS mode",
     [USBD_STR_SERIAL] = NULL, // generated dynamically
-    [USBD_STR_CDC] = "LPK CDC",
+    [USBD_STR_CDC] = "RDK CDC",
     #if CFG_TUD_MSC
-    [USBD_STR_MSC] = "LPK MSC",
+    [USBD_STR_MSC] = "RDK MSC",
     #endif
 };
 
