@@ -8,9 +8,9 @@
         "Castellated Pads",
         "Micro USB"
     ],
-    "id": "RDK",
+    "id": "RKD",
     "mcu": "rp2040",
-    "product": "RDK",
+    "product": "RKD",
     "thumbnail": "",
     "url": "https://github.com/PCX-LK",
     "vendor": "PCX-LK"
