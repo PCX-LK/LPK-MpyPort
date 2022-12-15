@@ -21,7 +21,7 @@ jobs:
     - name: mpy-cross
       run: |
         cd micropython
-        make -C mpy-cross -j4
+        make -C mpy-cross -j$(nproc)
     - name: Install build dep
       run: sudo apt install -y gcc-arm-none-eabi
     - name: Build
