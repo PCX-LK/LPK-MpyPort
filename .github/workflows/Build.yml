@@ -18,19 +18,19 @@ jobs:
         cd micropython
         git submodule update --init
         cp ../rkd.h lib/pico-sdk/src/boards/include/boards
-    - name: mpy-cross
+    - name: Install build dep
+      run: sudo apt install -y gcc-arm-none-eabi
+    - name: Build mpy-cross
       run: |
         cd micropython
         make -C mpy-cross -j$(nproc)
-    - name: Install build dep
-      run: sudo apt install -y gcc-arm-none-eabi
-    - name: Build
+    - name: Build firmware
       run: |
         cd micropython/ports/rp2
         make BOARD=RKD submodules -j$(nproc)
         make BOARD=RKD clean -j$(nproc)
         make BOARD=RKD -j$(nproc)
-    - name: Upload files to a GitHub release
+    - name: Upload firmware to a GitHub release
       uses: svenstaro/upload-release-action@2.3.0
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
