@@ -299,4 +299,4 @@ const char rp2_help_text[] =
     "MicroPython for RKD\n"
     "Ported by PCX-LK\n"
     "https://github.com/PCX-LK/RKD\n"
-// ;
+;
