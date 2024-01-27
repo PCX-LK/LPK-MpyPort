@@ -4,14 +4,12 @@
     ],
     "docs": "",
     "features": [
-        "Breadboard friendly",
-        "Castellated Pads",
-        "Micro USB"
+        "USB-C"
     ],
     "id": "RKD",
     "mcu": "rp2040",
     "product": "RKD",
     "thumbnail": "",
-    "url": "https://github.com/PCX-LK",
-    "vendor": "PCX-LK"
+    "url": "https://github.com/PTALTS-LK",
+    "vendor": "PTALTS-LK"
 }
